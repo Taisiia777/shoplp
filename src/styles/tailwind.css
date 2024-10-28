@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* -----Color variables------ */
+        --60_white_for_sliders: #ffffff99;
+        --amber_300: #ffcd5b;
+        --amber_300_01: #f3c853;
+        --black: #000000;
+        --blue_gray_100: #d9d9d9;
+        --deep_orange_100: #edc5c5;
+        --deep_orange_200: #f0be96;
+        --deep_orange_50: #f5e7db;
+        --deep_orange_50_01: #f9f1e9;
+        --deep_orange_50_90: #f9f1e990;
+        --deep_orange_a100: #dab971;
+        --deep_orange_a100_01: #eba37b;
+        --gray_400: #c8c8c8;
+        --gray_50: #faf8f6;
+        --gray_50_01: #fbf8f6;
+        --gray_600: #837c76;
+        --gray_700: #775f54;
+        --gray_800: #594942;
+        --gray_800_00: #5a4a4300;
+        --hoodie_colors_light_peach: #ffe2c7;
+        --hoodie_colors_navy: #374869;
+        --indigo_400: #5375b5;
+        --lime_800: #a6f83f;
+        --lime_900: #8a5939;
+        --orange_50: #fff6e5;
+        --peach_background: #EFCFC1;
+        --red_200: #e89e9a;
+        --red_300: #cf7948;
+        --red_300_01: #c7a748;
+        --red_600: #d24c3a;
+        --red_600_01: #d34d3a;
+        --sale_red: #ac1414;
+        --secondary_accent: #828282;
+        --teal_200: #69d0c1;
+        --white: #ffffff;
+        --black_600: #656d76;
+        --gray_shadow: #00000029;
+
+        /* ------Shadow variables------ */
+        --shadow-xs: 0 0 13px 5px #00000029;
+
+        /* ------Border radius variables------ */
+        --radius-xs: 1px;
+        --radius-sm: 3px;
+        --radius-md: 10px;
+        --radius-lg: 12px;
+        --radius-xl: 14px;
+        --radius-2xl: 20px;
+        --radius-3xl: 24px;
+
+        /* ------Spacing variables------ */
+        --space-xs: 0.13rem;
+        --space-sm: 0.25rem;
+        --space-md: 0.38rem;
+        --space-lg: 0.5rem;
+        --space-xl: 0.63rem;
+        --space-2xl: 0.69rem;
+        --space-3xl: 0.75rem;
+        --space-4xl: 0.88rem;
+        --space-5xl: 1rem;
+        --space-6xl: 1.13rem;
+        --space-7xl: 1.25rem;
+        --space-8xl: 1.38rem;
+        --space-9xl: 1.5rem;
+        --space-10xl: 2.38rem;
+        --space-11xl: 2.5rem;
+        --space-12xl: 5.63rem;
+        --space-13xl: 5.88rem;
+    }
+}
+@layer components {
+    /* -------------------------------------- */
+    /* Container CSS */
+    /* -------------------------------------- */
+    .container-xs {
+        @apply w-full mx-auto max-w-[75.75rem];
+    }
+}
