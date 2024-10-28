@@ -1,12 +1,12 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
-import Home from "pages/Home/index.jsx";
-import NotFound from "pages/NotFound/index.jsx";
-import Home1 from "pages/Home1/index.jsx";
-import Item from "pages/Item/index.jsx";
-import Card from "pages/Card/index.jsx";
-import NotFound1 from "pages/NotFound1/index.jsx";
-import Cart from "pages/Cart/index.jsx";
+import Home from "pages/Home.jsx";
+import NotFound from "pages/NotFound.jsx";
+import Home1 from "pages/Home1";
+import Item from "pages/Item";
+import Card from "pages/Card";
+import NotFound1 from "pages/NotFound1";
+import Cart from "pages/Cart";
 
 const ProjectRoutes = () => {
     let element = useRoutes([
