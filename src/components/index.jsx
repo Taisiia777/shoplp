@@ -6,10 +6,16 @@ import { Radio } from "./Radio/index";
 import { RatingBar } from "./RatingBar/index";
 import { SelectBox } from "./SelectBox/index";
 import { Slider } from "./Slider/index";
-import { Text } from "./Text/index";
+import { GoogleMap } from "./GoogleMap";
+import { Input } from "./Input";
+import { Text } from "./Text";
+
+
 
 export {
     Breadcrumb,
+    Input,
+    GoogleMap,
     BreadcrumbItem,
     BreadcrumbLink,
     BreadcrumbSeparator,
