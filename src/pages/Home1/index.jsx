@@ -83,7 +83,7 @@ export default function Home1Page() {
     const navigate = useNavigate();
 
     const handleProductClick = () => {
-        navigate('/card');
+        navigate('/item');
     };
     return (
         <>

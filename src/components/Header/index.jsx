@@ -1,3 +1,4 @@
+
 import MegaMenu1 from "../MegaMenu1";
 import { Heading, Img, Text } from "./..";
 import React from "react";
@@ -13,18 +14,27 @@ export default function Header({ ...props }) {
     const handleClickCart = () => {
         navigate('/cart');
     };
+    const handleClickCard = () => {
+        navigate('/card');
+    };
+    const handleClickRefund = () => {
+        navigate('/refund');
+    };
+    const handleClickContacts = () => {
+        navigate('/contscts');
+    };
+    const handleClickAccount = () => {
+        navigate('/account');
+    };
+
     return (
         <header {...props} className={`${props.className} flex sm:flex-col justify-between items-center gap-[1.25rem]`}>
             <Img onClick={handleClick} src="images/img_header_logo.svg" alt="Header Logo" className="h-[2.50rem] w-[5.63rem] object-contain" />
             <div className="flex w-[44%] items-center justify-between gap-[1.25rem] md:w-full sm:flex-col">
                 <ul className="flex gap-[0.50rem] sm:flex-col">
                     <li
-                        onMouseLeave={() => {
-                            setMenuOpen(false);
-                        }}
-                        onMouseEnter={() => {
-                            setMenuOpen(true);
-                        }}
+                        onMouseLeave={() => setMenuOpen(false)}
+                        onMouseEnter={() => setMenuOpen(true)}
                     >
                         <div className="flex cursor-pointer items-center gap-[0.25rem]">
                             <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black">
@@ -34,33 +44,27 @@ export default function Header({ ...props }) {
                         </div>
                         {menuOpen ? <MegaMenu1 /> : null}
                     </li>
-                    <li>
-                        <a href="#">
-                            <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black">
-                                Доставка
-                            </Text>
-                        </a>
+                    <li onClick={handleClickCard} className="cursor-pointer">
+                        <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black">
+                            Доставка
+                        </Text>
                     </li>
-                    <li>
-                        <a href="/refund">
-                            <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black">
-                                Возврат и обмен
-                            </Text>
-                        </a>
+                    <li onClick={handleClickRefund} className="cursor-pointer">
+                        <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black">
+                            Возврат и обмен
+                        </Text>
                     </li>
-                    <li>
-                        <a href="/contscts">
-                            <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black">
-                                Контакты
-                            </Text>
-                        </a>
+                    <li onClick={handleClickContacts} className="cursor-pointer">
+                        <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black">
+                            Контакты
+                        </Text>
                     </li>
                 </ul>
                 <div className="flex w-[12%] justify-center gap-[0.63rem] sm:w-full">
-                    <a href="/account">
+                    <div onClick={handleClickAccount} className="cursor-pointer">
                         <Img src="images/img_fluent_person_16_regular.svg" alt="Profile Icon" className="h-[1.75rem] w-[1.75rem]" />
-                    </a>
-                    <div onClick={handleClickCart} className="flex h-[1.75rem] w-[1.75rem] flex-col items-center justify-center bg-[url(/public/images/img_f7_bag.svg)] bg-cover bg-no-repeat md:h-auto">
+                    </div>
+                    <div onClick={handleClickCart} className="flex h-[1.75rem] w-[1.75rem] flex-col items-center justify-center bg-[url(/public/images/img_f7_bag.svg)] bg-cover bg-no-repeat md:h-auto cursor-pointer">
                         <Heading
                             size="headingxs"
                             as="p"
@@ -74,4 +78,3 @@ export default function Header({ ...props }) {
         </header>
     );
 }
-

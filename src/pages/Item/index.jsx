@@ -195,7 +195,7 @@ export default function ItemPage() {
                                         size="md"
                                         shape="round"
                                         color="orange_50_deep_orange_200"
-                                        className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem]"
+                                        className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem] text-[#8A5A3A] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96]"
                                     >
                                         Добавить в корзину
                                     </Button>

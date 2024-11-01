@@ -7,7 +7,7 @@ import RatingRow from "../../components/RatingRow";
 import UserProfile from "../../components/UserProfile";
 import UserProfileImage from "../../components/UserProfileImage";
 import React, { Suspense } from "react";
-
+import Header from "components/Header";
 import {
     AccordionItemPanel,
     AccordionItemHeading,
@@ -93,85 +93,10 @@ export default function CardPage() {
                 <div className="mt-[1.25rem] flex flex-col items-center">
                     <div className="flex flex-col items-center self-stretch">
                         <div className="container-xs flex flex-col gap-[0.13rem] md:px-[1.25rem]">
-                            <header className="relative flex items-start justify-between gap-[1.25rem] md:flex-col">
-                                <Img
-                                    src="images/img_header_logo.svg"
-                                    alt="Logo Image"
-                                    className="h-[2.50rem] w-[5.63rem] object-contain"
-                                />
-                                <div className="mt-[0.38rem] flex w-[44%] flex-col self-end md:w-full md:self-auto">
-                                    <div className="flex items-center justify-between gap-[1.25rem] sm:flex-col">
-                                        <div className="flex gap-[1.25rem] sm:flex-col">
-                                            <ul className="flex gap-[0.25rem]">
-                                                <li
-                                                    onMouseLeave={() => {
-                                                        setMenuOpen(false);
-                                                    }}
-                                                    onMouseEnter={() => {
-                                                        setMenuOpen(true);
-                                                    }}
-                                                >
-                                                    <div className="flex cursor-pointer items-center gap-[0.25rem]">
-                                                        <Text
-                                                            size="1280_h4"
-                                                            as="p"
-                                                            className="cursor-pointer text-[1.13rem] font-normal text-black hover:text-red-300"
-                                                        >
-                                                            Худи{" "}
-                                                        </Text>
-                                                        <Img
-                                                            src="images/img_arrow_down_black.svg"
-                                                            alt="Dropdown Icon"
-                                                            className="h-[0.75rem] w-[0.75rem]"
-                                                        />
-                                                    </div>
-                                                    {menuOpen ? <MegaMenu1 /> : null}
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-red-300">
-                                                            Доставка
-                                                        </Text>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" className="cursor-pointer">
-                                                        <Text
-                                                            size="1280_h4"
-                                                            as="p"
-                                                            className="text-[1.13rem] font-normal text-black hover:text-red-300"
-                                                        >
-                                                            Возврат и обмен
-                                                        </Text>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black">
-                                                Контакты
-                                            </Text>
-                                        </div>
-                                        <div className="flex w-[12%] justify-center gap-[0.63rem] sm:w-full">
-                                            <a href="#">
-                                                <Img
-                                                    src="images/img_fluent_person_16_regular.svg"
-                                                    alt="Profile Icon"
-                                                    className="h-[1.75rem] w-[1.75rem]"
-                                                />
-                                            </a>
-                                            <div className="flex h-[1.75rem] w-[1.75rem] flex-col items-center justify-center bg-[url(/public/images/img_f7_bag.svg)] bg-cover bg-no-repeat md:h-auto">
-                                                <Heading
-                                                    size="headingxs"
-                                                    as="p"
-                                                    className="flex h-[1.13rem] w-[1.13rem] items-center justify-center rounded-lg bg-sale_red text-center text-[0.50rem] font-semibold text-white"
-                                                >
-                                                    2
-                                                </Heading>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </header>
+<Header/>
+
+
                             <div className="flex justify-center md:flex-col mt-[20px] mb-[20px]">
                                 <Text size="b3" as="p" className="text-[0.75rem] font-normal text-secondary_accent">
                                     Главная / На детей и подростков / Плюшевое оверсайз худи на ребенка и подростка{" "}
