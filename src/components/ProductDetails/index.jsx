@@ -10,10 +10,12 @@ export default function ProductDetails({
                                            colorDescriptionOne = "Нежно-персиковый",
                                            colorDescriptionTwo = "Темно-синий",
                                            ru = "Универсальный RU ",
+                                           onClick,
                                            ...props
                                        }) {
     return (
-        <div {...props} className={`${props.className} flex flex-col items-center w-full gap-[1.00rem]`}>
+        <div {...props} className={`${props.className} flex flex-col items-center w-full gap-[1.00rem]`}             onClick={onClick} // Добавляем обработчик клика
+        >
             <div className="flex h-[33.75rem] flex-col items-start self-stretch rounded-[20px] bg-[url(/public/images/img_photo_2.png)] bg-cover bg-no-repeat px-[0.88rem] py-[0.63rem] sm:h-auto">
                 <div className="flex gap-[0.38rem] self-stretch">
                     <div className="h-[0.38rem] w-full rounded-[3px] bg-white" />
@@ -26,20 +28,16 @@ export default function ProductDetails({
                     <div className="h-[0.38rem] w-full rounded-[3px] bg-60__white_for_sliders" />
                     <div className="h-[0.38rem] w-full rounded-[3px] bg-60__white_for_sliders" />
                 </div>
-                <div className="mr-[0.88rem] mt-[0.88rem] flex h-[1.88rem] w-[16%] items-center justify-center self-end bg-[url(/public/images/img_group.svg)] bg-cover bg-no-repeat sm:mr-0 sm:h-auto sm:w-full sm:px-[1.25rem]">
+                <div className="mr-[0.88rem] mt-[0.88rem] flex min-h-[30px] h-[30px] w-[90px] items-center justify-center self-end bg-[url(/public/images/img_group.svg)] bg-cover bg-center bg-no-repeat sm:mr-0 sm:h-auto sm:w-full sm:px-[1.25rem]">
                     <Heading as="p" className="text-[0.88rem] font-semibold tracking-[0.00rem] text-white">
                         {prop}
                     </Heading>
                 </div>
-                <Img
-                    src="images/img_image_4.png"
-                    alt="Image Four"
-                    className="ml-[6.38rem] mt-[1.25rem] h-[2.13rem] w-[2.13rem] object-cover sm:ml-0"
-                />
+
                 <Img
                     src="images/img_sparkles.svg"
                     alt="Sparkles Image"
-                    className="mb-[18.75rem] mt-[1.50rem] h-[5.63rem] w-[5.63rem] self-center"
+                    className="mb-[17.75rem] mt-[10.50rem] h-[5.63rem] w-[5.63rem] self-center"
                 />
             </div>
             <div className="flex flex-col items-start gap-[0.50rem] self-stretch px-[1.25rem] sm:gap-[0.50rem]">

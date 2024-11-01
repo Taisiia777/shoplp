@@ -1,13 +1,21 @@
 import MegaMenu1 from "../MegaMenu1";
 import { Heading, Img, Text } from "./..";
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function Header({ ...props }) {
     const [menuOpen, setMenuOpen] = React.useState(false);
+    const navigate = useNavigate();
 
+    const handleClick = () => {
+        navigate('/');
+    };
+    const handleClickCart = () => {
+        navigate('/cart');
+    };
     return (
         <header {...props} className={`${props.className} flex sm:flex-col justify-between items-center gap-[1.25rem]`}>
-            <Img src="images/img_header_logo.svg" alt="Header Logo" className="h-[2.50rem] w-[5.63rem] object-contain" />
+            <Img onClick={handleClick} src="images/img_header_logo.svg" alt="Header Logo" className="h-[2.50rem] w-[5.63rem] object-contain" />
             <div className="flex w-[44%] items-center justify-between gap-[1.25rem] md:w-full sm:flex-col">
                 <ul className="flex gap-[0.50rem] sm:flex-col">
                     <li
@@ -34,14 +42,14 @@ export default function Header({ ...props }) {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/refund">
                             <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black">
                                 Возврат и обмен
                             </Text>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/contscts">
                             <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black">
                                 Контакты
                             </Text>
@@ -49,10 +57,10 @@ export default function Header({ ...props }) {
                     </li>
                 </ul>
                 <div className="flex w-[12%] justify-center gap-[0.63rem] sm:w-full">
-                    <a href="#">
+                    <a href="/account">
                         <Img src="images/img_fluent_person_16_regular.svg" alt="Profile Icon" className="h-[1.75rem] w-[1.75rem]" />
                     </a>
-                    <div className="flex h-[1.75rem] w-[1.75rem] flex-col items-center justify-center bg-[url(/public/images/img_f7_bag.svg)] bg-cover bg-no-repeat md:h-auto">
+                    <div onClick={handleClickCart} className="flex h-[1.75rem] w-[1.75rem] flex-col items-center justify-center bg-[url(/public/images/img_f7_bag.svg)] bg-cover bg-no-repeat md:h-auto">
                         <Heading
                             size="headingxs"
                             as="p"

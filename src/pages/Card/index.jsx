@@ -7,6 +7,7 @@ import RatingRow from "../../components/RatingRow";
 import UserProfile from "../../components/UserProfile";
 import UserProfileImage from "../../components/UserProfileImage";
 import React, { Suspense } from "react";
+
 import {
     AccordionItemPanel,
     AccordionItemHeading,
@@ -15,6 +16,7 @@ import {
     Accordion,
     AccordionItem,
 } from "react-accessible-accordion";
+import {useNavigate} from "react-router-dom";
 
 const customerReviewsList = [
     { userName: "А", userFullName: "Алиса К.", userJoinDate: "11 сентября 2024 года", prop: "Стильно, удобно, оверсайз" },
@@ -73,7 +75,11 @@ const dropDownOptions = [
 
 export default function CardPage() {
     const [menuOpen, setMenuOpen] = React.useState(false);
+    const navigate = useNavigate();
 
+    const handleClick = () => {
+        navigate('/cart');
+    };
     return (
         <>
             <Helmet>
@@ -163,16 +169,10 @@ export default function CardPage() {
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#">
-                                        <Img
-                                            src="images/img_image_4.png"
-                                            alt="Promo Image"
-                                            className="relative ml-[6.13rem] mt-[-0.13rem] h-[2.13rem] w-[2.13rem] object-cover md:ml-0"
-                                        />
-                                    </a>
+
                                 </div>
                             </header>
-                            <div className="flex justify-center md:flex-col">
+                            <div className="flex justify-center md:flex-col mt-[20px] mb-[20px]">
                                 <Text size="b3" as="p" className="text-[0.75rem] font-normal text-secondary_accent">
                                     Главная / На детей и подростков / Плюшевое оверсайз худи на ребенка и подростка{" "}
                                 </Text>
@@ -189,8 +189,8 @@ export default function CardPage() {
             </Text>
         </div>
         <div className="flex items-center">
-            <Img src="images/img_ph_share_fat.svg" alt="Share Icon" className="h-[1.00rem] w-[1.00rem]" />
-            <Text size="b3" as="p" className="text-[0.75rem] font-normal text-secondary_accent">
+            <Img src="images/img_ph_share_fat.svg" alt="Share Icon"
+                 className="h-[1.00rem] w-[1.00rem]"/>            <Text size="b3" as="p" className="text-[0.75rem] font-normal text-secondary_accent">
                 Поделиться{" "}
             </Text>
         </div>
@@ -199,7 +199,7 @@ export default function CardPage() {
 </div>
 </div>
 <div className="container-xs flex flex-col gap-[3.63rem] md:px-[1.25rem] sm:gap-[1.81rem]">
-    <div className="flex items-center gap-[1.13rem] md:flex-col">
+    <div className="flex items-center gap-[2.13rem] md:flex-col">
         <div className="flex flex-1 gap-[1.25rem] md:flex-col md:self-stretch">
             <div className="flex w-[12%] flex-col gap-[1.25rem] opacity-90 md:w-full md:flex-row sm:flex-col">
                 <UserProfileImage userImage="images/img_rectangle_2.png" />
@@ -220,11 +220,7 @@ export default function CardPage() {
             />
         </div>
         <div className="flex w-[42%] flex-col items-end md:w-full">
-            <Img
-                src="images/img_image_4.png"
-                alt="Secondary Image"
-                className="relative z-[1] mr-[6.13rem] h-[2.13rem] w-[2.13rem] object-cover md:mr-0"
-            />
+
             <div className="relative mt-[-1.00rem] flex flex-col gap-[1.88rem] self-stretch">
                 <div className="flex flex-col gap-[1.50rem]">
                     <div className="flex flex-col gap-[0.25rem]">
@@ -338,7 +334,8 @@ export default function CardPage() {
                         size="md"
                         shape="round"
                         color="orange_50_deep_orange_200"
-                        className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem]"
+                        className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem] text-[#8A5A3A] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96]"
+                        onClick={handleClick}
                     >
                         Добавить в корзину
                     </Button>

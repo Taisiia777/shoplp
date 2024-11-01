@@ -65,16 +65,20 @@ export default function AccountColumnTwo() {
                                 <SelectBox
                                     options={countryOptions}
                                     defaultValue={countryOptions.find((option) => option.value === "RU")}
-                                    className="flex max-h-[1.13rem] flex-shrink-0 items-center justify-center bg-transparent pl-[1.13rem]"
+                                    className="flex max-h-[2.13rem] items-center bg-transparent text-gray-500 border-none focus:outline-none focus:ring-0"
                                     indicator={
-                                        <Img src="images/img_arrow_down.svg" alt="Arrowdown" className="h-[1.00rem] w-[1.00rem]" />
+                                        <Img
+                                            src="images/img_arrow_down.svg"
+                                            alt="Arrowdown"
+                                            className="h-[0.50rem] w-[0.50rem]"
+                                        />
                                     }
                                 />
                                 <input
-                                    name="letsiconseditli"
-                                    placeholder="+7 "
+                                    name="phone"
+                                    placeholder="+7 (000) 000 00 00"
                                     type="tel"
-                                    className="ml-[0.63rem] flex h-[1.50rem] flex-grow items-center justify-center gap-[1.00rem] pl-[0.75rem] pr-[1.13rem] text-[1.13rem] text-secondary_accent"
+                                    className="ml-[0.63rem] w-full bg-transparent text-[1.13rem] text-gray-500 placeholder-gray-400 outline-none border-none focus:outline-none focus:ring-0"
                                 />
                             </div>
                             <Input

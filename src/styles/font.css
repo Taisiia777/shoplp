@@ -37,3 +37,15 @@
     font-family: "Nunito";
     font-weight: 700;
 }
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url("/public/fonts/Rounds.ttf");
+    font-family: "Rounds";
+    font-weight: 900;
+}
+/* Стиль для класса font-roundsblack */
+.font-roundsblack {
+    font-family: "Rounds", sans-serif;
+    font-weight: 900; /* Используйте подходящий вес */
+}

@@ -17,9 +17,9 @@ import History from "pages/History";
 import AccountOne from "pages/AccountOne";
 const ProjectRoutes = () => {
     let element = useRoutes([
-        { path: "/", element: <Home /> },
-        { path: "*", element: <NotFound /> },
-        { path: "home1", element: <Home1 /> },
+        { path: "/dashboard", element: <Home /> },
+        { path: "*", element: <NotFound1 /> },
+        { path: "/", element: <Home1 /> },
         { path: "item", element: <Item /> },
         { path: "card", element: <Card /> },
         { path: "notfound1", element: <NotFound1 /> },

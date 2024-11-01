@@ -38,3 +38,14 @@ ul {
 .alice-carousel__dots-item {
   cursor: pointer;
 }
+.input-custom {
+  appearance: none !important;
+  background-color: #f9f9f9 !important; /* Можно заменить на нужный цвет */
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0.5rem 0.75rem !important;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  border-radius: 10px !important; /* Радиус для закругленных углов */
+}

@@ -44,7 +44,8 @@ export default function OrderOnePage() {
                         <div className="flex items-start gap-[2.38rem] md:flex-col">
                             <div className="flex flex-1 flex-col gap-[1.25rem] self-center md:self-stretch">
                                 <div className="flex flex-col gap-[1.25rem]">
-                                    <div className="flex flex-col items-start gap-[1.25rem] rounded-[20px] bg-white px-[1.88rem] py-[2.50rem] sm:p-[1.25rem]">
+                                    <div
+                                        className="flex flex-col items-start gap-[1.25rem] rounded-[20px] bg-white px-[1.88rem] py-[2.50rem] sm:p-[1.25rem]">
                                         <Text as="p" className="text-[1.13rem] font-normal text-black">
                                             Введите личные данные
                                         </Text>
@@ -53,48 +54,51 @@ export default function OrderOnePage() {
                                                 <Input
                                                     shape="round"
                                                     name="имя"
-                                                    placeholder={`Имя`}
-                                                    className="w-full rounded-[10px] px-[1.50rem] sm:px-[1.25rem]"
+                                                    placeholder="Имя"
+                                                    className="w-full h-[2.75rem] rounded-[10px] bg-gray-100 px-[1.50rem] text-gray-500 placeholder-gray-400 border-none focus:outline-none focus:ring-0 sm:px-[1.25rem]"
                                                 />
                                                 <Input
                                                     shape="round"
                                                     name="фамилия"
-                                                    placeholder={`Фамилия`}
-                                                    className="w-full rounded-[10px] px-[1.50rem] sm:px-[1.25rem]"
+                                                    placeholder="Фамилия"
+                                                    className="w-full h-[2.75rem] rounded-[10px] bg-gray-100 px-[1.50rem] text-gray-500 placeholder-gray-400 border-none focus:outline-none focus:ring-0 sm:px-[1.25rem]"
                                                 />
                                             </div>
                                             <div className="flex gap-[0.63rem] md:flex-col">
-                                                <div className="flex h-[2.75rem] w-full items-center justify-center rounded-[10px] bg-gray-100 px-[1.50rem] sm:px-[1.25rem]">
+                                                <div
+                                                    className="flex h-[2.75rem] w-full items-center rounded-[10px] bg-gray-100 px-[1.50rem] sm:px-[1.25rem]">
                                                     <SelectBox
                                                         options={countryOptions}
                                                         defaultValue={countryOptions.find((option) => option.value === "RU")}
-                                                        className="flex max-h-[1.13rem] flex-shrink-0 items-center justify-center bg-transparent"
+                                                        className="flex max-h-[2.13rem] items-center bg-transparent text-gray-500 border-none focus:outline-none focus:ring-0"
                                                         indicator={
                                                             <Img
                                                                 src="images/img_arrow_down.svg"
                                                                 alt="Arrowdown"
-                                                                className="h-[1.00rem] w-[1.00rem]"
+                                                                className="h-[0.50rem] w-[0.50rem]"
                                                             />
                                                         }
                                                     />
                                                     <input
-                                                        name="frame_one"
-                                                        placeholder="+7 "
+                                                        name="phone"
+                                                        placeholder="+7 (000) 000 00 00"
                                                         type="tel"
-                                                        className="ml-[0.63rem] flex h-[1.50rem] w-[50%] items-center justify-center px-[0.75rem] text-[1.13rem] text-black"
+                                                        className="ml-[0.63rem] w-full bg-transparent text-[1.13rem] text-gray-500 placeholder-gray-400 outline-none border-none focus:outline-none focus:ring-0"
                                                     />
                                                 </div>
                                                 <Input
                                                     shape="round"
                                                     name="элпочта"
-                                                    placeholder={`Эл. почта`}
-                                                    className="w-full rounded-[10px] px-[1.50rem] sm:px-[1.25rem]"
+                                                    placeholder="Эл. почта"
+                                                    className="w-full h-[2.75rem] rounded-[10px] bg-gray-100 px-[1.50rem] text-gray-500 placeholder-gray-400 border-none focus:outline-none focus:ring-0 sm:px-[1.25rem]"
                                                 />
                                             </div>
                                         </div>
                                     </div>
+
                                     <div>
-                                        <div className="flex flex-col items-start gap-[1.13rem] rounded-[20px] bg-white px-[1.88rem] py-[2.50rem] sm:p-[1.25rem]">
+                                        <div
+                                            className="flex flex-col items-start gap-[1.13rem] rounded-[20px] bg-white px-[1.88rem] py-[2.50rem] sm:p-[1.25rem]">
                                             <Text as="p" className="text-[1.13rem] font-normal text-black">
                                                 Выберите удобный способ доставки
                                             </Text>
@@ -107,7 +111,7 @@ export default function OrderOnePage() {
                                                         <Text as="p" className="text-[1.13rem] font-normal text-black">
                                                             Москва
                                                         </Text>
-                                                        <div className="h-[0.06rem] w-full self-stretch bg-black" />
+                                                        <div className="h-[0.06rem] w-full self-stretch bg-black"/>
                                                     </div>
                                                     <Img
                                                         src="images/img_arrow_down_black.svg"
@@ -231,7 +235,7 @@ export default function OrderOnePage() {
             <Button
                 shape="round"
                 color="orange_50_deep_orange_200"
-                className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem]"
+                className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem] text-[#8A5A3A] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96]"
             >
                 Оформить заказ
             </Button>

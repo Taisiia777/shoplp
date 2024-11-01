@@ -1,7 +1,13 @@
 import { Heading, Img } from "components";
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function HistoryColumn() {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/account');
+    };
     return (
         <div className="mt-[1.63rem] flex flex-col items-center self-stretch">
             <div className="container-xs flex flex-col items-center gap-[2.38rem] md:px-[1.25rem]">
@@ -18,7 +24,7 @@ export default function HistoryColumn() {
                             alt="Fluenthometwent"
                             className="h-[1.38rem] w-[1.38rem]"
                         />
-                        <Heading as="h2" className="text-[1.13rem] font-semibold text-black">
+                        <Heading onClick={handleClick} as="h2" className="text-[1.13rem] font-semibold text-black">
                             Аккаунт
                         </Heading>
                     </div>

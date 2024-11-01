@@ -47,7 +47,7 @@ export default function ItemPage() {
                             <Breadcrumb
                                 separator={<Text
                                     className="h-[1.19rem] w-[0.38rem] text-[0.75rem] font-normal text-colors">/</Text>}
-                                className="flex flex-1 flex-wrap items-center gap-[2.75rem] md:self-stretch"
+                                className="flex flex-1 flex-wrap items-center gap-[4px] md:self-stretch"
                             >
                                 <BreadcrumbItem>
                                     <BreadcrumbLink href="#">
@@ -112,7 +112,7 @@ export default function ItemPage() {
                                 />
                             </div>
                             <div className="flex w-[42%] flex-col gap-[1.88rem] md:w-full">
-                                <div className="flex flex-col gap-[1.50rem]">
+                                <div className="flex flex-col gap-[1.50rem] ml-[10px]">
                                     <div className="flex flex-col items-start gap-[0.25rem]">
                                         <Text
                                             size="textxl"
@@ -122,7 +122,7 @@ export default function ItemPage() {
                                             Комплект для всей семьи
                                         </Text>
                                         <div className="flex gap-[0.63rem] self-stretch">
-                                            <div className="flex w-[26%] gap-[0.38rem]">
+                                            <div className="flex w-[30%] gap-[0.38rem]">
                                                 <div className="flex w-[32%] items-center">
                                                     <Img
                                                         src="images/img_star.svg"
@@ -200,7 +200,7 @@ export default function ItemPage() {
                                         Добавить в корзину
                                     </Button>
 
-                                    <div className="flex flex-col gap-[1.13rem]">
+                                    <div className="flex flex-row gap-[1.13rem]">
                                         <div className="flex items-center gap-[0.38rem]">
                                             <Text size="1280_h4" as="p"
                                                   className="text-[1.13rem] font-normal text-black">

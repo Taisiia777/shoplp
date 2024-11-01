@@ -5,7 +5,7 @@ export default function RefundColumnOne() {
     return (
         <div className="flex flex-col items-center">
             <div className="container-xs flex flex-col gap-[1.88rem] md:px-[1.25rem]">
-                <div className="h-[21.88rem] rounded-[20px] bg-[url(/public/images/img_banner_slider.png)] bg-cover bg-no-repeat px-[1.25rem] py-[2.13rem] md:h-auto sm:py-[1.25rem]">
+                <div className="h-[21.88rem] rounded-[20px] bg-[url(/public/images/img_refund.png)] bg-cover bg-no-repeat px-[1.25rem] py-[2.13rem] md:h-auto sm:py-[1.25rem]">
                     <div className="mb-[8.88rem] flex flex-col items-start gap-[0.88rem]">
                         <Text
                             size="1280_h1"

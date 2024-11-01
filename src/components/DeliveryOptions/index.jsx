@@ -23,7 +23,7 @@ export default function DeliveryOptions({
                     </div>
                 </div>
             </div>
-            <Img src="images/img_ei_question.svg" alt="Question Image" className="h-[1.50rem] w-[1.50rem]" />
+            <Img src="/public/images/img_el_question.svg" alt="Question Image" className="h-[1.50rem] w-[1.50rem]" />
         </div>
     );
 }

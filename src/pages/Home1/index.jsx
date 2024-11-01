@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import ProductDetails from "../../components/ProductDetails";
 import HomeBannerSection from "./HomeBannerSection";
 import React, { Suspense } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const productHighlightsGrid = [
     {
@@ -79,6 +80,11 @@ const productHighlightsGrid = [
 ];
 
 export default function Home1Page() {
+    const navigate = useNavigate();
+
+    const handleProductClick = () => {
+        navigate('/card');
+    };
     return (
         <>
             <Helmet>
@@ -100,7 +106,7 @@ export default function Home1Page() {
                             <div className="grid grid-cols-2 justify-center gap-[1.88rem] md:grid-cols-1">
                                 <Suspense fallback={<div>Loading feed...</div>}>
                                     {productHighlightsGrid.map((d, index) => (
-                                        <ProductDetails {...d} key={"homeGrid" + index} />
+                                        <ProductDetails {...d} key={"homeGrid" + index} onClick={handleProductClick}/>
                                     ))}
                                 </Suspense>
                             </div>

@@ -29,7 +29,7 @@ export default function ContsctsPage() {
                                         <Heading
                                             size="1280_socials"
                                             as="h2"
-                                            className="text-[1.38rem] font-semibold leading-[1.88rem] tracking-[0.00rem] text-deep_orange-a100"
+                                            className="text-[1.38rem] font-semibold leading-[1.88rem] tracking-[0.00rem] text-deep_orange-a100 text-[#DA9B71]"
                                         >
                                             <>
                                                 +7 999 999 9999

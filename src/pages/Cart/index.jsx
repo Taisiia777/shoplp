@@ -3,6 +3,7 @@ import { Button, Heading, Text, SelectBox, Img } from "../../components";
 import Header from "../../components/Header";
 import ProductDetails1 from "../../components/ProductDetails1";
 import React, { Suspense } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const productDetailsList = [
     {
@@ -26,7 +27,7 @@ const productDetailsList = [
         originalPrice: "8 800 ₽",
     },
     {
-        productImage: "images/img_frame_44x100.png",
+        productImage: "images/img_frame_140x100.png",
         productName: "Плюшевое оверсайз худи на взрослого",
         colorDescription: "Нежно-персиковый",
         sizeDescription: "Универсальный RU ",
@@ -43,6 +44,11 @@ const dropDownOptions = [
 ];
 
 export default function CartPage() {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/orderone');
+    };
     return (
         <>
             <Helmet>
@@ -144,7 +150,8 @@ export default function CartPage() {
                                         size="sm"
                                         shape="round"
                                         color="orange_50_deep_orange_200"
-                                        className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem]"
+                                        className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96] text-[#8A5A3A]"
+                                        onClick={handleClick}
                                     >
                                         Заказать
                                     </Button>
