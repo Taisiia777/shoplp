@@ -49,3 +49,25 @@ ul {
   line-height: 1.5rem !important;
   border-radius: 10px !important; /* Радиус для закругленных углов */
 }
+@keyframes cartBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  70% {
+    transform: translateY(-8px);
+  }
+  90% {
+    transform: translateY(-3px);
+  }
+}
+
+.cart-bounce {
+  animation: cartBounce 0.5s ease-in-out;
+}
+

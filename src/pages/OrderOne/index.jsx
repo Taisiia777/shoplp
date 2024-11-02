@@ -5,6 +5,7 @@ import Header from "components/Header";
 import OrderoneColumn from "./OrderoneColumn";
 import metadata from "libphonenumber-js/metadata.full.json";
 import React from "react";
+import { YMaps, Map, Placemark } from "react-yandex-maps";
 
 export default function OrderOnePage() {
     const countryOptions = React.useMemo(() => {
@@ -144,7 +145,14 @@ export default function OrderOnePage() {
                                         <Text as="p" className="text-[1.13rem] font-normal text-black">
                                             Адрес пункта выдачи
                                         </Text>
-                                        <GoogleMap showMarker={false} className="h-[24.75rem] self-stretch" />
+                                        <YMaps>
+                                            <Map
+                                                defaultState={{ center: [55.7558, 37.6176], zoom: 10 }}
+                                                className="h-[24.75rem] w-full rounded-lg"
+                                            >
+                                                <Placemark geometry={[55.7558, 37.6176]} />
+                                            </Map>
+                                        </YMaps>
                                     </div>
                                 </div>
                                 <div>
@@ -235,7 +243,8 @@ export default function OrderOnePage() {
             <Button
                 shape="round"
                 color="orange_50_deep_orange_200"
-                className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem] text-[#8A5A3A] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96]"
+                className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem] text-[#8A5A3A] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96]
+                                           hover:scale-105 active:scale-95 transition-transform duration-300 ease-in-out"
             >
                 Оформить заказ
             </Button>

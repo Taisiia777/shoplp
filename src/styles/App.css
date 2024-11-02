@@ -1,0 +1,41 @@
+.fade-enter {
+    opacity: 0;
+    transform: scale(0.98);
+}
+.fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+}
+.fade-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+.fade-exit-active {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 300ms, transform 300ms;
+}
+@keyframes cartBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    70% {
+        transform: translateY(-8px);
+    }
+    90% {
+        transform: translateY(-3px);
+    }
+}
+
+.cart-bounce {
+    animation: cartBounce 0.5s ease-in-out;
+}
+
+

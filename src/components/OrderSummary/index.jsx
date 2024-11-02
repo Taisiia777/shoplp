@@ -101,7 +101,8 @@ export default function OrderSummary({
                     <Button
                         shape="round"
                         color="orange_50_deep_orange_200"
-                        className="min-w-[11.38rem] rounded-[10px] px-[1.50rem] font-medium sm:px-[1.25rem]"
+                        className="min-w-[11.38rem] rounded-[10px] px-[1.50rem] font-medium sm:px-[1.25rem] text-[#8A5A3A] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96]
+                            hover:scale-105 active:scale-95 transition-transform duration-300 ease-in-out"
                     >
                         {reviewButtonLabel}
                     </Button>

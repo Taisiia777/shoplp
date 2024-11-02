@@ -6,8 +6,11 @@ import MegaMenu1 from "../../components/MegaMenu1";
 import RatingRow from "../../components/RatingRow";
 import UserProfile from "../../components/UserProfile";
 import UserProfileImage from "../../components/UserProfileImage";
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import Header from "components/Header";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../store/cartSlice';
+
 import {
     AccordionItemPanel,
     AccordionItemHeading,
@@ -18,6 +21,13 @@ import {
 } from "react-accessible-accordion";
 import {useNavigate} from "react-router-dom";
 
+const productImages = [
+    "images/img_photo_580x598.png",
+    "images/img_photo_580x598_alt1.png",
+    "images/img_photo_580x598_alt2.png",
+    "images/img_photo_580x598_alt3.png",
+    "images/img_photo_580x598_alt4.png",
+];
 const customerReviewsList = [
     { userName: "А", userFullName: "Алиса К.", userJoinDate: "11 сентября 2024 года", prop: "Стильно, удобно, оверсайз" },
     {
@@ -74,12 +84,36 @@ const dropDownOptions = [
 ];
 
 export default function CardPage() {
+    const dispatch = useDispatch();
+
     const [menuOpen, setMenuOpen] = React.useState(false);
     const navigate = useNavigate();
+    const [activeImage, setActiveImage] = useState(productImages[0]); // Track the current image
+    const [fadeOut, setFadeOut] = useState(false); // Control fade effect
+    const [isAnimating, setIsAnimating] = useState(false); // Control cart animation
+    const handleImageChange = (newImage) => {
+        if (newImage === activeImage) return; // Prevent change if the image is the same
 
-    const handleClick = () => {
-        navigate('/cart');
+        setFadeOut(true); // Start fade-out
+        setTimeout(() => {
+            setActiveImage(newImage); // Change the image after fade-out
+            setFadeOut(false); // Fade back in
+        }, 300); // Duration of fade-out transition
     };
+    const handleAddToCart = () => {
+        const item = {
+            id: "2564873",
+            name: "Комплект для всей семьи",
+            price: 3300,
+            quantity: 1,
+        };
+        dispatch(addToCart(item));
+
+        // Trigger animation in Header
+        setIsAnimating(true);
+        setTimeout(() => setIsAnimating(false), 700); // Reset animation after 0.7s
+    };
+
     return (
         <>
             <Helmet>
@@ -94,7 +128,7 @@ export default function CardPage() {
                     <div className="flex flex-col items-center self-stretch">
                         <div className="container-xs flex flex-col gap-[0.13rem] md:px-[1.25rem]">
 
-<Header/>
+                            <Header isAnimating={isAnimating} />
 
 
                             <div className="flex justify-center md:flex-col mt-[20px] mb-[20px]">
@@ -127,21 +161,39 @@ export default function CardPage() {
     <div className="flex items-center gap-[2.13rem] md:flex-col">
         <div className="flex flex-1 gap-[1.25rem] md:flex-col md:self-stretch">
             <div className="flex w-[12%] flex-col gap-[1.25rem] opacity-90 md:w-full md:flex-row sm:flex-col">
-                <UserProfileImage userImage="images/img_rectangle_2.png" />
-                <Img
-                    src="images/img_rectangle_80x82.png"
-                    alt="Product Image"
-                    className="h-[5.00rem] w-full flex-1 rounded-[14px] object-cover md:h-auto sm:w-full"
-                />
-                <UserProfileImage userImage="images/img_rectangle_3.png" />
-                <UserProfileImage userImage="images/img_rectangle_4.png" />
-                <UserProfileImage userImage="images/img_rectangle_5.png" />
-                <div className="h-[5.00rem] w-[5.13rem] rounded-[14px] bg-blue_gray-100" />
+                {productImages.map((image, index) => (
+                    <Img
+                        key={index}
+                        src={image}
+                        alt={`Thumbnail ${index + 1}`}
+                        className={`h-[5.00rem] w-full flex-1 rounded-[14px] cursor-pointer object-cover ${
+                            activeImage === image ? "border-2 border-[#CF7A48]" : "border-none"
+                        }`}
+                        onClick={() => handleImageChange(image)}
+                    />
+                ))}
+                {/*<UserProfileImage userImage="images/img_rectangle_2.png" />*/}
+                {/*<Img*/}
+                {/*    src="images/img_rectangle_80x82.png"*/}
+                {/*    alt="Product Image"*/}
+                {/*    className="h-[5.00rem] w-full flex-1 rounded-[14px] object-cover md:h-auto sm:w-full"*/}
+                {/*/>*/}
+                {/*<UserProfileImage userImage="images/img_rectangle_3.png" />*/}
+                {/*<UserProfileImage userImage="images/img_rectangle_4.png" />*/}
+                {/*<UserProfileImage userImage="images/img_rectangle_5.png" />*/}
+                {/*<div className="h-[5.00rem] w-[5.13rem] rounded-[14px] bg-blue_gray-100" />*/}
             </div>
+            {/*<Img*/}
+            {/*    src="images/img_photo_1.png"*/}
+            {/*    alt="Main Product Image"*/}
+            {/*    className="h-[36.25rem] w-[88%] rounded-[20px] object-contain md:w-full"*/}
+            {/*/>*/}
             <Img
-                src="images/img_photo_1.png"
+                src={activeImage}
                 alt="Main Product Image"
-                className="h-[36.25rem] w-[88%] rounded-[20px] object-contain md:w-full"
+                className={`h-[36.25rem] w-[88%] rounded-[20px] object-contain transition-opacity duration-300 ease-in-out md:w-full ${
+                    fadeOut ? "opacity-0" : "opacity-100"
+                }`}
             />
         </div>
         <div className="flex w-[42%] flex-col items-end md:w-full">
@@ -259,8 +311,9 @@ export default function CardPage() {
                         size="md"
                         shape="round"
                         color="orange_50_deep_orange_200"
-                        className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem] text-[#8A5A3A] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96]"
-                        onClick={handleClick}
+                        className="self-stretch rounded-[10px] px-[2.13rem] font-medium sm:px-[1.25rem] text-[#8A5A3A] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96]
+                                           hover:scale-105 active:scale-95 transition-transform duration-300 ease-in-out"
+                        onClick={handleAddToCart}
                     >
                         Добавить в корзину
                     </Button>

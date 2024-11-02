@@ -34,7 +34,7 @@ export default function HistoryColumn() {
                             alt="Fluentchecktwen"
                             className="h-[1.38rem] w-[1.38rem] self-end"
                         />
-                        <Heading as="h3" className="text-[1.13rem] font-semibold text-red-300_01">
+                        <Heading as="h3" className="text-[1.13rem] font-semibold text-red-300">
                             История заказов
                         </Heading>
                     </div>
