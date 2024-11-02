@@ -148,15 +148,8 @@ export default function OrderOnePage() {
                                         <div
                                             className="flex flex-col items-center gap-[1.88rem] bg-white mt-[2rem] w-full">
                                             <iframe
-                                                title="Google Map"
-                                                src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Moscow,Russia"
-                                                width="100%"
-                                                height="400"
-                                                style={{border: 0}}
-                                                allowFullScreen
-                                                loading="lazy"
-                                                referrerPolicy="no-referrer-when-downgrade"
-                                            ></iframe>
+                                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A392377820fbb9a8276f7900181524617e1cee5164386903ab0b9faf0b6158e27&amp;source=constructor"
+                                                width="758" height="396" frameBorder="0"></iframe>
                                         </div>
                                     </div>
                                 </div>
