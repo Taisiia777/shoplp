@@ -5,7 +5,6 @@ import Header from "components/Header";
 import OrderoneColumn from "./OrderoneColumn";
 import metadata from "libphonenumber-js/metadata.full.json";
 import React from "react";
-import { YMaps, Map, Placemark } from "react-yandex-maps";
 
 export default function OrderOnePage() {
     const countryOptions = React.useMemo(() => {
@@ -141,22 +140,29 @@ export default function OrderOnePage() {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="flex flex-col items-start gap-[1.25rem] rounded-[20px] bg-white px-[1.88rem] py-[2.50rem] sm:p-[1.25rem]">
+                                    <div
+                                        className="flex flex-col items-start gap-[1.25rem] rounded-[20px] bg-white px-[1.88rem] py-[2.50rem] sm:p-[1.25rem]">
                                         <Text as="p" className="text-[1.13rem] font-normal text-black">
                                             Адрес пункта выдачи
                                         </Text>
-                                        <YMaps>
-                                            <Map
-                                                defaultState={{ center: [55.7558, 37.6176], zoom: 10 }}
-                                                className="h-[24.75rem] w-full rounded-lg"
-                                            >
-                                                <Placemark geometry={[55.7558, 37.6176]} />
-                                            </Map>
-                                        </YMaps>
+                                        <div
+                                            className="flex flex-col items-center gap-[1.88rem] bg-white mt-[2rem] w-full">
+                                            <iframe
+                                                title="Google Map"
+                                                src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Moscow,Russia"
+                                                width="100%"
+                                                height="400"
+                                                style={{border: 0}}
+                                                allowFullScreen
+                                                loading="lazy"
+                                                referrerPolicy="no-referrer-when-downgrade"
+                                            ></iframe>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="flex flex-col items-start gap-[1.25rem] rounded-[20px] bg-white px-[1.88rem] py-[2.50rem] sm:p-[1.25rem]">
+                                    <div
+                                        className="flex flex-col items-start gap-[1.25rem] rounded-[20px] bg-white px-[1.88rem] py-[2.50rem] sm:p-[1.25rem]">
                                         <Text as="p" className="text-[1.13rem] font-normal text-black">
                                             Оставьте комментарии к заказку
                                         </Text>
