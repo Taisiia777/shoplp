@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import ProductDetails from "../../components/ProductDetails";
-import HomeBannerSection from "./HomeBannerSection";
 import { Suspense } from "react";
 import { useNavigate } from 'react-router-dom';
 
@@ -32,7 +31,7 @@ const productHighlightsGrid = [
     // Other products...
 ];
 
-export default function Home1Page() {
+export default function CatalogPage() {
     const navigate = useNavigate();
 
     const handleProductClick = () => {
@@ -55,8 +54,7 @@ export default function Home1Page() {
                 <div className="flex flex-col gap-[5.50rem] self-stretch md:gap-[4.13rem] sm:gap-[2.75rem]">
                     <div className="flex flex-col items-center gap-[5.63rem] md:gap-[4.19rem] sm:gap-[2.81rem]">
                         {/* home banner section */}
-                        <HomeBannerSection />
-                        <div className="container-xs md:px-[1.25rem]">
+                        <div className="container-xs md:px-[1.25rem] mt-[20px]">
                             <div className="grid grid-cols-2 justify-center gap-[1.88rem] md:grid-cols-1">
                                 <Suspense fallback={<div>Loading feed...</div>}>
                                     {productHighlightsGrid.map((d, index) => (

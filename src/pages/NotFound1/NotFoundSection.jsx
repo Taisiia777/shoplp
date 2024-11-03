@@ -1,6 +1,6 @@
+
 import { Button, Text } from "../../components";
 import { useNavigate } from 'react-router-dom';
-
 import React from "react";
 
 export default function NotFoundSection() {
@@ -9,26 +9,31 @@ export default function NotFoundSection() {
     const handleClick = () => {
         navigate('/');
     };
+
     return (
         <>
-            {/* not found section */}
-            <div className="flex justify-center">
-                <div className="container-xs flex justify-center md:px-[1.25rem]">
+            {/* Not Found Section */}
+            <div className="flex justify-center items-center min-h-[580px] mt-[30px] max-w-[1212px] w-[95vw] mx-auto bg-gray-100">
+                <div className="container-xs flex justify-center md:px-4">
                     <div
-                        className="flex h-[36.25rem] w-full flex-col items-center justify-end
-                                   rounded-[20px] bg-cover bg-center bg-no-repeat
-                                   px-[3.50rem] py-[4.38rem] md:h-auto md:p-[1.25rem]"
+                        className="flex h-[36.25rem] w-full flex-col items-center justify-center
+                                   rounded-[20px] bg-cover bg-center bg-no-repeat p-10"
                         style={{
-                            backgroundImage: "url('/images/img_notFound.png')", // Прямой URL к изображению
+                            backgroundImage: "url('/images/img_notFound.png')",
                         }}
                     >
-                        <div className="mt-[19.25rem] flex flex-col items-center gap-[0.75rem]">
+                        <div className="flex flex-col items-center gap-4 text-center sm:text-left mt-[13rem]">
                             <Text
-                                size="1280_h1"
                                 as="p"
-                                className="font-roundsblack text-[2.75rem] font-normal tracking-[0.06rem] text-[#FFF] md:text-[2.50rem] sm:text-[2.13rem]"
+                                className="text-[98px] font-roundsblack font-normal leading-[115%] w-[100%] tracking-[3%] text-white"
                             >
-                                Страница находится в разработке
+                                404
+                            </Text>
+                            <Text
+                                as="p"
+                                className="text-[42px] font-roundsblack font-normal leading-[115%] tracking-[3%] text-white"
+                            >
+                                Страница не найдена
                             </Text>
                             <Button
                                 size="md"
@@ -47,4 +52,3 @@ export default function NotFoundSection() {
         </>
     );
 }
-

@@ -42,7 +42,7 @@ export default function Footer({ ...props }) {
                                     <Img src="images/img_call.svg" alt="Call Icon" className="h-[2.75rem] w-[2.75rem]" />
                                     <div className="flex flex-1 items-center gap-[0.25rem]">
                                         <Button shape="square" className="w-[2.75rem] px-[0.13rem]">
-                                            <Img src="images/img_checkmark.svg" />
+                                            <Img src="images/img_checkmark1.svg" />
                                         </Button>
                                         <Text
                                             size="meta"

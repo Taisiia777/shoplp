@@ -81,7 +81,7 @@ import OrderOne from "pages/OrderOne";
 import Account from "pages/Account";
 import History from "pages/History";
 import AccountOne from "pages/AccountOne";
-
+import CatalogPage from "pages/CatalogPage";
 const ProjectRoutes = () => {
     const location = useLocation(); // Get current location
 
@@ -91,6 +91,7 @@ const ProjectRoutes = () => {
         { path: "/", element: <Home1 /> },
         { path: "item", element: <Item /> },
         { path: "card", element: <Card /> },
+        { path: "catalog", element: <CatalogPage /> },
         { path: "notfound1", element: <NotFound1 /> },
         { path: "cart", element: <Cart /> },
         { path: "refund", element: <Refund /> },
@@ -101,6 +102,8 @@ const ProjectRoutes = () => {
         { path: "account", element: <Account /> },
         { path: "history", element: <History /> },
         { path: "accountone", element: <AccountOne /> },
+
+
     ]);
 
     return (
