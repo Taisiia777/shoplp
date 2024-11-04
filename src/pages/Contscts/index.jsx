@@ -1,14 +1,71 @@
 import { Helmet } from "react-helmet";
-import { Heading, Text } from "components";
+import {Button, Heading, Text} from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import ContsctsRowOne from "./ContsctsRowOne";
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 export default function ContsctsPage() {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 650);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
         <>
-            <Helmet>
+            {isMobile ? (
+                <>
+                    <Helmet>
+                        <title>Savelii&#39;s Application17</title>
+                        <meta name="description" content="Web site created using create-react-app" />
+                    </Helmet>
+                    <div className="flex w-full flex-col items-center gap-[1.88rem] bg-white">
+                        <div className="container-xs mt-[1.25rem] md:px-[1.25rem]">
+                            <Header />
+                        </div>
+                        <div className="flex flex-col gap-[23.25rem] self-stretch md:gap-[17.44rem] sm:gap-[11.63rem]">
+                            <div className="flex flex-col items-center gap-[3.25rem] sm:gap-[1.63rem]">
+                                <div
+                                    className="flex justify-center items-center min-h-[580px] mt-[30px] max-w-[1212px] w-[95vw] mx-auto bg-gray-100">
+                                    <div className="relative container-xs flex justify-center md:px-4">
+                                        <div
+                                            className="absolute w-[88vw] inset-0 bg-gradient-to-t from-[#5A4A43] max-h-[70%] mt-[50%] to-transparent opacity-90 rounded-b-[20px] z-10 pointer-events-none max-w-[1212px] mx-auto"/>
+
+                                        <div
+                                            className="flex h-[36.25rem] w-full flex-col items-center justify-center
+                                   rounded-[20px] bg-cover bg-center bg-no-repeat p-10"
+                                            style={{
+                                                backgroundImage: "url('/images/img_notFound.png')",
+                                            }}
+                                        >
+                                            <div
+                                                className="flex flex-col items-center gap-4 text-left sm:text-left mt-[30rem]">
+
+                                                <Text
+                                                    as="p"
+                                                    className="text-[42px] font-roundsblack font-normal w-[80vw] leading-[115%] tracking-[3%] text-white z-[10]"
+                                                >
+                                                    Контакты
+                                                </Text>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <Footer />
+                        </div>
+                    </div>
+
+                </>
+            ) : (
+<>
+                    <Helmet>
                 <title>Savelii&#39;s Application17</title>
                 <meta name="description" content="Web site created using create-react-app" />
             </Helmet>
@@ -68,6 +125,9 @@ export default function ContsctsPage() {
                     <Footer />
                 </div>
             </div>
+</>
+                )}
+
         </>
     );
 }
