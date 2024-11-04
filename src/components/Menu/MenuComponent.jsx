@@ -5,13 +5,14 @@ import ContactInfo from './ContactInfo';
 import SocialLinks from './SocialLinks';
 
 const menuItems = [
-    { title: 'Все худи', id: 'all-hoodies' },
-    { title: 'Для детей', id: 'kids-hoodies' },
-    { title: 'Для взрослых', id: 'adult-hoodies' },
-    { title: 'Доставка', id: 'delivery' },
-    { title: 'Возврат и обмен', id: 'return-exchange' },
-    { title: 'Контакты', id: 'contacts' }
+    { title: 'Все худи', id: 'all-hoodies', llink: '/catalog' },
+    { title: 'Для детей', id: 'kids-hoodies', link: '/catalog' },
+    { title: 'Для взрослых', id: 'adult-hoodies', link: '/catalog' },
+    { title: 'Доставка', id: 'delivery', link: '/card' },
+    { title: 'Возврат и обмен', id: 'return-exchange', link: '/refund' },
+    { title: 'Контакты', id: 'contacts', link: '/contscts' }
 ];
+
 
 const deliveryOptions = [
     {
@@ -40,7 +41,9 @@ function MenuComponent() {
             <section data-layername="frame" className="flex flex-col text-lg font-medium tracking-normal text-black">
                 <ul data-layername="frame" className="flex flex-col w-full mt-[40px]">
                     {menuItems.map((item) => (
-                        <MenuItem key={item.id} title={item.title} />
+                        // <MenuItem key={item.id} title={item.title} />
+                        <MenuItem key={item.id} title={item.title} link={item.link} />
+
                     ))}
                 </ul>
             </section>

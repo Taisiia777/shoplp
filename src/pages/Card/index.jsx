@@ -700,29 +700,11 @@ export default function CardPage() {
                                     <Header isAnimating={isAnimating} />
 
 
-                                    <div className="flex justify-center md:flex-col mt-[20px] mb-[20px]">
+                                    <div className="flex justify-center md:flex-col mt-[50px] mb-[20px]">
                                         <Text size="b3" as="p" className="text-[0.75rem] font-normal text-secondary_accent">
                                             Главная / На детей и подростков / Плюшевое оверсайз худи на ребенка и подростка{" "}
                                         </Text>
-                                        <div className="flex flex-1 justify-center gap-[0.63rem] md:self-stretch">
-                                            <div className="flex flex-1 items-center justify-end">
-                                                <Img
-                                                    src="images/img_solar_copy_outline_red_300_01.svg"
-                                                    alt="Social Icon"
-                                                    className="h-[1.00rem] w-[1.00rem]"
-                                                />
-                                                <Text size="b3" as="p" className="text-[0.75rem] font-normal text-red-300_01">
-                                                    Артикул: 2564786
 
-                                                </Text>
-                                            </div>
-                                            <div className="flex items-center">
-                                                <Img src="images/img_ph_share_fat.svg" alt="Share Icon"
-                                                     className="h-[1.00rem] w-[1.00rem]"/>            <Text size="b3" as="p" className="text-[0.75rem] font-normal text-secondary_accent">
-                                                Поделиться{" "}
-                                            </Text>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

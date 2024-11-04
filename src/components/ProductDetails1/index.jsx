@@ -136,11 +136,11 @@ export default function ProductDetails1({
             <div className="flex flex-1 gap-[1.25rem]">
                 <Img src={productImage} alt="Product Image" className="h-[8.75rem] w-[30%] rounded-[10px] object-contain" />
                 <div className="flex flex-1 flex-col gap-[1.00rem] sm:gap-[1.00rem]">
-                    <div className="flex flex-col gap-[0.50rem] sm:gap-[0.50rem]">
+                    <div className="flex flex-col gap-[0.50rem] sm:gap-[0.50rem mt-[1.13rem]">
                         <Text
                             size="1280_h4"
                             as="p"
-                            className="w-[80%] text-[1.13rem] font-normal leading-[2.13rem] text-black sm:w-full sm:text-[0.94rem]"
+                            className="w-[80%] text-[1.13rem] font-[700] max-h-[50px] leading-[1.13rem] text-black sm:w-full sm:text-[0.94rem]"
                         >
                             {name}
                         </Text>
@@ -172,7 +172,7 @@ export default function ProductDetails1({
                     />
                 </div>
             </div>
-            <div className="flex w-[24%] items-center justify-center gap-[1.00rem]">
+            <div className="flex w-[24%] items-center justify-center gap-[1.00rem] mb-[1.25rem]">
                 <div
                     onClick={(event) => {
                         event.stopPropagation();

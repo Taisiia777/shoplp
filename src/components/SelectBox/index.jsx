@@ -36,7 +36,7 @@ const SelectBox = React.forwardRef(
                 <Select
                     ref={ref}
                     options={options}
-                    className={`${className} flex ${shape && shapes[shape]} ${size && sizes[size]} ${variant && variants[variant]?.[color]}`}
+                    className={`${className} flex min-w-[10.50rem] ${shape && shapes[shape]} ${size && sizes[size]} ${variant && variants[variant]?.[color]}`}
                     isSearchable={isSearchable}
                     isMulti={isMulti}
                     components={{

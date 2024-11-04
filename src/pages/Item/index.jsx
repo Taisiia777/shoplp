@@ -366,6 +366,12 @@ export default function ItemPage() {
                 <div className="flex w-full flex-col items-center bg-white py-[1.25rem] mt-[60px]">
                     <div className="container-xs mb-[0.25rem] flex flex-col gap-[1.75rem] md:px-[1.25rem]">
                         <Header isAnimating={isAnimating}/>
+                        <div className="flex justify-center md:flex-col mt-[20px] mb-[20px]">
+                            <Text size="b3" as="p" className="text-[0.75rem] font-normal text-secondary_accent">
+                                Главная / На детей и подростков / Плюшевое оверсайз худи на ребенка и подростка{" "}
+                            </Text>
+
+                        </div>
                         <div className="flex flex-col items-start pl-5 w-full">
                             <Swiper
                                 modules={[Autoplay]}
@@ -378,7 +384,7 @@ export default function ItemPage() {
                                 }}
                             >
                                 {productImages.map((image, index) => (
-                                    <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                                    <SwiperSlide key={index} style={{display: 'flex', justifyContent: 'flex-start'}}>
                                         <img
                                             src={image}
                                             alt={`Product Image ${index + 1}`}
@@ -561,14 +567,14 @@ export default function ItemPage() {
 
                                                             {/* Tooltip Icon */}
                                                             <div className="ml-auto">
-                                                                <Img src="/public/images/img_el_question.svg" alt="Info Icon"
+                                                                <Img src="/public/images/img_el_question.svg"
+                                                                     alt="Info Icon"
                                                                      className="h-4 w-4 mt-1"/>
                                                             </div>
                                                         </div>
                                                     ))}
                                                 </div>
                                             </div>
-
 
 
                                         </div>
@@ -605,9 +611,9 @@ export default function ItemPage() {
                                             </Text>
                                         </BreadcrumbLink>
                                     </BreadcrumbItem>
-                                            <BreadcrumbItem>
-                                                <BreadcrumbLink href="#">
-                                                    <Text size="b3" as="p"
+                                    <BreadcrumbItem>
+                                        <BreadcrumbLink href="#">
+                                            <Text size="b3" as="p"
                                                           className="text-[0.75rem] font-normal text-secondary_accent">
                                                         Все худи
                                                     </Text>
