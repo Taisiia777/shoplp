@@ -47,7 +47,7 @@ export default function ProductDetails({
 
             </div>
             <div
-                className={`flex h-[33.75rem] flex-col items-start self-stretch rounded-[20px] ${isMobile ? 'bg-contain' : 'bg-contain'}  bg-cover bg-center bg-no-repeat px-[0.88rem] py-[0.63rem] sm:h-auto`}
+                className={`flex h-[33.75rem] flex-col items-start self-stretch rounded-[20px]  bg-contain bg-center bg-no-repeat px-[0.88rem] py-[0.63rem] sm:h-auto`}
                 style={{backgroundImage: `url(${img})`, minHeight: "540px", zIndex: "2"}}
             >
 
