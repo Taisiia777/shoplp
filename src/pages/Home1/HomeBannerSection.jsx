@@ -121,13 +121,13 @@ export default function HomeBannerSection() {
             {
                 image: "/images/img_banner_slider.png",
                 text: "Создай свой уютный момент",
-                customTextStyles: "mt-[20vh] text-[2rem] mb-[20vh] ml-auto mr-auto",
+                customTextStyles: "text-left mt-[20vh] text-[2rem] mt-[25vh] ml-[1rem] ",
                 mobileBackgroundSize: "contain"
             },
             {
                 image: "/images/img_slider_2_375.png",
                 text: "Худи на все\nслучаи жизни",
-                customTextStyles: "text-left px-4 whitespace-pre-line mt-[20vh] ml-[1rem] text-[1.5rem]",
+                customTextStyles: "text-left px-4 whitespace-pre-line mt-[27vh] ml-[1rem] text-[1.5rem]",
                 mobileBackgroundSize: "cover"
             },
             {
@@ -157,7 +157,7 @@ export default function HomeBannerSection() {
             <div className="MainSlider container-xs mx-auto flex w-full md:px-[1.25rem] relative z-10">
                 <Slider
                     autoPlay
-                    autoPlayInterval={2000}
+                    autoPlayInterval={5000}
                     responsive={{ 0: { items: 1 }, 551: { items: 1 }, 1051: { items: 1 } }}
                     renderDotsItem={(props) => (
                         <div
