@@ -47,25 +47,25 @@ export default function ProductDetails({
 
             </div>
             <div className="flex flex-col items-start gap-[0.50rem] self-stretch px-[1.25rem] sm:gap-[0.50rem]">
-                <div className="flex flex-wrap items-center gap-[0.63rem] self-stretch">
-                    <Heading
-                        size="h3_for_price"
-                        as="h5"
-                        className="text-[1.25rem] font-extrabold tracking-[0.00rem] text-black sm:text-[1.06rem]"
-                    >
-                        {currentPrice}
-                    </Heading>
-                    <Heading as="p" className="text-[0.88rem] font-semibold tracking-[0.00rem] text-sale_red">
-                        {discount}
-                    </Heading>
-                    <Heading
-                        size="crossed_out_priced"
-                        as="p"
-                        className="text-[0.88rem] font-medium tracking-[0.00rem] text-secondary_accent line-through"
-                    >
-                        {oldPrice}
-                    </Heading>
-                </div>
+                {/*<div className="flex flex-wrap items-center gap-[0.63rem] self-stretch">*/}
+                {/*    <Heading*/}
+                {/*        size="h3_for_price"*/}
+                {/*        as="h5"*/}
+                {/*        className="text-[1.25rem] font-extrabold tracking-[0.00rem] text-black sm:text-[1.06rem]"*/}
+                {/*    >*/}
+                {/*        {currentPrice}*/}
+                {/*    </Heading>*/}
+                {/*    <Heading as="p" className="text-[0.88rem] font-semibold tracking-[0.00rem] text-sale_red">*/}
+                {/*        {discount}*/}
+                {/*    </Heading>*/}
+                {/*    <Heading*/}
+                {/*        size="crossed_out_priced"*/}
+                {/*        as="p"*/}
+                {/*        className="text-[0.88rem] font-medium tracking-[0.00rem] text-secondary_accent line-through"*/}
+                {/*    >*/}
+                {/*        {oldPrice}*/}
+                {/*    </Heading>*/}
+                {/*</div>*/}
                 <Text size="1280_h4" as="p" className="text-[1.13rem] font-normal text-black sm:text-[0.94rem]">
                     {productDescription}
                 </Text>

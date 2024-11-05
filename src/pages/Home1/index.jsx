@@ -18,8 +18,8 @@ const productHighlightsGrid = [
         colorDescriptionOne: "Нежно-персиковый",
         colorDescriptionTwo: "Темно-синий",
         ru: "Универсальный RU ",
-        img: "/public/images/1.png",
-        url: "https://www.wildberries.ru/catalog/273375403/detail.aspx?targetUrl=GP",
+        img: "/images/1.png",
+        url: "https://www.wildberries.ru/catalog/273363041/detail.aspx?targetUrl=GP",
 
     },
     {
@@ -31,8 +31,8 @@ const productHighlightsGrid = [
         colorDescriptionOne: "Нежно-персиковый",
         colorDescriptionTwo: "Темно-синий",
         ru: "Универсальный RU",
-        img: "/public/images/2.png",
-        url: "https://www.wildberries.ru/catalog/273374254/detail.aspx?targetUrl=GP",
+        img: "/images/2.png",
+        url: "https://www.wildberries.ru/catalog/273363042/detail.aspx?targetUrl=GP",
 
     },
     {
@@ -103,10 +103,13 @@ export default function Home1Page() {
                                 </Suspense>
                             </div>
                         </div>
-                        <div style={{
+                        <div className="mapContainer" style={{
                             position: "relative",
                             overflow: "hidden",
-                            zIndex: "10"
+                            zIndex: "10",
+                            maxWidth: "1211px",
+                            width: "100%", // Устанавливаем ширину карты в 100% родительского контейнера
+                            height: "auto", // Высота будет авто-адаптироваться, но медиазапросы помогут уточнить
                         }}>
                             <a
                                 href="https://yandex.ru/maps/213/moscow/search/Wildberries/?utm_medium=mapframe&utm_source=maps"
@@ -136,14 +139,20 @@ export default function Home1Page() {
                             </a>
                             <iframe
                                 src="https://yandex.ru/map-widget/v1/?display-text=Wildberries&ll=37.616985%2C55.734152&mode=search&sll=37.616985%2C55.734113&text=chain_id%3A%282129228517%29&z=12"
-                                width="758px"
-                                height="396"
+                                width="100%" // Устанавливаем ширину фрейма в 100%
+                                height="400" // Высоту можно изменить для адаптивности
                                 frameBorder="1"
                                 allowFullScreen
-                                style={{position: "relative", zIndex: "11"}}
+                                style={{
+                                    position: "relative",
+                                    zIndex: "11",
+                                    border: "none",
+                                    maxWidth: "100%"
+                                }}
                                 title="Wildberries Pickup Points in Moscow"
                             ></iframe>
                         </div>
+
                     </div>
                     <Footer/>
                 </div>
