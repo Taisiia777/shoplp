@@ -10,14 +10,22 @@ export default function ProductDetails({
                                            colorDescriptionOne = "Нежно-персиковый",
                                            colorDescriptionTwo = "Темно-синий",
                                            ru = "Универсальный RU ",
-                                           onClick,
+                                           // onClick,
+                                            img="images/1.png",
+                                            url="https://www.wildberries.ru/catalog/273375403/detail.aspx?targetUrl=GP",
                                            ...props
                                        }) {
+    const handleClick = () => {
+        // Переход на ссылку
+        window.location.href = url;
+    };
     return (
-        <div {...props} className={`${props.className} flex flex-col items-center w-full gap-[1.00rem]`}             onClick={onClick} // Добавляем обработчик клика
+        <div {...props} className={`${props.className} flex flex-col items-center w-full gap-[1.00rem]`}
+             onClick={handleClick} // Добавляем обработчик клика
         >
             <div
-                className="flex h-[33.75rem] flex-col items-start self-stretch rounded-[20px] bg-[url('/public/images/img_photo_2.png')] bg-cover bg-center bg-no-repeat px-[0.88rem] py-[0.63rem] sm:h-auto"
+                className={`flex h-[33.75rem] flex-col items-start self-stretch rounded-[20px]  bg-cover bg-center bg-no-repeat px-[0.88rem] py-[0.63rem] sm:h-auto`}
+                style={{ backgroundImage: `url(${img})` }}
             >
                 <div className="flex gap-[0.38rem] self-stretch">
                     <div className="h-[0.38rem] w-full rounded-[3px] bg-white"/>
@@ -37,11 +45,6 @@ export default function ProductDetails({
                     </Heading>
                 </div>
 
-                <Img
-                    src="images/img_sparkles.svg"
-                    alt="Sparkles Image"
-                    className="mb-[17.75rem] mt-[4.50rem] h-[5.63rem] w-[5.63rem] self-center"
-                />
             </div>
             <div className="flex flex-col items-start gap-[0.50rem] self-stretch px-[1.25rem] sm:gap-[0.50rem]">
                 <div className="flex flex-wrap items-center gap-[0.63rem] self-stretch">
