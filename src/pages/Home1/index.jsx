@@ -44,7 +44,7 @@ const productHighlightsGrid = [
         colorDescriptionOne: "Нежно-персиковый",
         colorDescriptionTwo: "Темно-синий",
         ru: "Универсальный RU",
-        img: "/public/images/3.png",
+        img: "/images/3.png",
         url: "https://www.wildberries.ru/catalog/273374254/detail.aspx?targetUrl=GP",
 
     },
@@ -57,7 +57,7 @@ const productHighlightsGrid = [
         colorDescriptionOne: "Нежно-персиковый",
         colorDescriptionTwo: "Темно-синий",
         ru: "Универсальный RU",
-        img: "/public/images/4.png",
+        img: "/images/4.png",
         url: "https://www.wildberries.ru/catalog/273375403/detail.aspx?targetUrl=GP",
 
     },
