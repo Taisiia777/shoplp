@@ -66,16 +66,32 @@ export default function Footer({ ...props }) {
                             © 2024 OMLI. Все права защищены
                         </Text>
                         <div className="flex w-[48%] items-start justify-between gap-[1.25rem] self-center md:w-full">
+                            {/*<ul className="flex flex-col items-start gap-[0.38rem] self-center">*/}
+                            {/*    <li>*/}
+                            {/*        <a href="#">*/}
+                            {/*            <Text size="b3" as="p" className="text-[0.75rem] font-normal text-black">*/}
+                            {/*                Политика конфиденциальности*/}
+                            {/*            </Text>*/}
+                            {/*        </a>*/}
+                            {/*    </li>*/}
+                            {/*    <li>*/}
+                            {/*        <a href="Оферта" target="_blank" rel="noreferrer">*/}
+                            {/*            <Text size="b3" as="p" className="text-[0.75rem] font-normal text-black">*/}
+                            {/*                Оферта*/}
+                            {/*            </Text>*/}
+                            {/*        </a>*/}
+                            {/*    </li>*/}
+                            {/*</ul>*/}
                             <ul className="flex flex-col items-start gap-[0.38rem] self-center">
                                 <li>
-                                    <a href="#">
+                                        <a href="/documents/Политика конфиденциальности Omli.docx" download target="_blank" rel="noreferrer">
                                         <Text size="b3" as="p" className="text-[0.75rem] font-normal text-black">
                                             Политика конфиденциальности
                                         </Text>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="Оферта" target="_blank" rel="noreferrer">
+                                    <a href="/documents/Публичная оферта Omli.docx" download target="_blank" rel="noreferrer">
                                         <Text size="b3" as="p" className="text-[0.75rem] font-normal text-black">
                                             Оферта
                                         </Text>

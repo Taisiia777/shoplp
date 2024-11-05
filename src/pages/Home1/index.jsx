@@ -5,6 +5,8 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import ProductDetails from "../../components/ProductDetails";
 import HomeBannerSection from "./HomeBannerSection";
+import HomeBannerSection1 from "./HomeBannerSection1";
+
 import { Suspense } from "react";
 // import { useNavigate } from 'react-router-dom';
 
@@ -88,6 +90,8 @@ export default function Home1Page() {
                     <div className="flex flex-col items-center gap-[5.63rem] md:gap-[4.19rem] sm:gap-[2.81rem]">
                         {/* home banner section */}
                         <HomeBannerSection/>
+                        <HomeBannerSection1/>
+
                         <div className="container-xs md:px-[1.25rem]">
                             <div className="grid grid-cols-2 justify-center gap-[1.88rem] md:grid-cols-1">
                                 <Suspense fallback={<div>Loading feed...</div>}>
