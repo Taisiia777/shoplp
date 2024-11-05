@@ -1,5 +1,5 @@
 import { Text, Heading, Img } from "./..";
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 export default function ProductDetails({
                                            prop = "Хит",
@@ -19,14 +19,38 @@ export default function ProductDetails({
         // Переход на ссылку
         window.location.href = url;
     };
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 620);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 620);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
         <div {...props} className={`${props.className} flex flex-col items-center w-full gap-[1.00rem]`}
              onClick={handleClick} // Добавляем обработчик клика
         >
+            <div style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                maxHeight: "540px",
+                borderRadius: "20px",
+                zIndex: "0",
+                width: '100%',
+                height: '100%',
+                background: "#F1F1F1"
+            }}>
+
+            </div>
             <div
-                className={`flex h-[33.75rem] flex-col items-start self-stretch rounded-[20px]  bg-cover bg-center bg-no-repeat px-[0.88rem] py-[0.63rem] sm:h-auto`}
-                style={{ backgroundImage: `url(${img})`, minHeight: "540px" }}
+                className={`flex h-[33.75rem] flex-col items-start self-stretch rounded-[20px] ${isMobile ? 'bg-contain' : 'bg-contain'}  bg-cover bg-center bg-no-repeat px-[0.88rem] py-[0.63rem] sm:h-auto`}
+                style={{backgroundImage: `url(${img})`, minHeight: "540px", zIndex: "2"}}
             >
+
                 <div className="flex gap-[0.38rem] self-stretch">
                     <div className="h-[0.38rem] w-full rounded-[3px] bg-white"/>
                     <div className="h-[0.38rem] w-full rounded-[3px] bg-60__white_for_sliders"/>
