@@ -30,9 +30,8 @@ export default function Footer({ ...props }) {
                                     className="text-[1.38rem] font-semibold leading-[1.88rem] tracking-[0.00rem] text-black"
                                 >
                                     <>
-                                        +7 999 999 9999
                                         <br />
-                                        omfihoodie@gmail.com
+                                        management@omli.io
                                     </>
                                 </Heading>
                                 <div className="flex w-[74%] gap-[0.25rem] md:w-full">

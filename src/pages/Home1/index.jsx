@@ -19,7 +19,7 @@ const productHighlightsGrid = [
         colorDescriptionOne: "Нежно-персиковый",
         colorDescriptionTwo: "Темно-синий",
         ru: "Универсальный RU ",
-        img: "/images/1.png",
+        images: ["/images/1_1.jpg", "/images/1_2.jpg", "/images/1_3.jpg", "/images/1_4.jpg", "/images/1_5.jpg"],
         url: "https://www.wildberries.ru/catalog/273363041/detail.aspx?targetUrl=GP",
 
     },
@@ -32,7 +32,7 @@ const productHighlightsGrid = [
         colorDescriptionOne: "Нежно-персиковый",
         colorDescriptionTwo: "Темно-синий",
         ru: "Универсальный RU",
-        img: "/images/2.png",
+        images: ["/images/2_1.jpg", "/images/2_2.jpg", "/images/2_3.jpg", "/images/2_4.jpg", "/images/2_5.jpg"],
         url: "https://www.wildberries.ru/catalog/273363042/detail.aspx?targetUrl=GP",
 
     },
@@ -45,7 +45,7 @@ const productHighlightsGrid = [
         colorDescriptionOne: "Нежно-персиковый",
         colorDescriptionTwo: "Темно-синий",
         ru: "Универсальный RU",
-        img: "/images/3.png",
+        images: ["/images/3_1.jpg", "/images/3_2.jpg", "/images/3_3.jpg", "/images/3_4.jpg", "/images/3_5.jpg"],
         url: "https://www.wildberries.ru/catalog/273374254/detail.aspx?targetUrl=GP",
 
     },
@@ -58,7 +58,7 @@ const productHighlightsGrid = [
         colorDescriptionOne: "Нежно-персиковый",
         colorDescriptionTwo: "Темно-синий",
         ru: "Универсальный RU",
-        img: "/images/4.png",
+        images: ["/images/4_1.jpg", "/images/4_2.jpg", "/images/4_3.jpg", "/images/4_4.jpg", "/images/4_5.jpg"],
         url: "https://www.wildberries.ru/catalog/273375403/detail.aspx?targetUrl=GP",
 
     },
