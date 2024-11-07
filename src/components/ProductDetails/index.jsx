@@ -140,9 +140,7 @@ export default function ProductDetails({
                                            url="https://www.wildberries.ru/catalog/273375403/detail.aspx?targetUrl=GP",
                                            ...props
                                        }) {
-    const handleClick = () => {
-        window.location.href = url;
-    };
+
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 620);
 
@@ -155,8 +153,8 @@ export default function ProductDetails({
     }, []);
 
     return (
-        <div {...props} className={`${props.className} flex flex-col items-center max-w-[400px] w-full gap-[1.00rem]`}
-             onClick={handleClick}>
+        <div {...props} className={`${props.className} rounded-[20px] flex flex-col items-center max-w-[400px] w-full gap-[1.00rem]`}
+             >
             <div style={{
                 position: "absolute",
                 top: "0",
@@ -176,7 +174,7 @@ export default function ProductDetails({
                 loop={true}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 className="h-[33.75rem] w-full rounded-[20px] bg-cover bg-center"
-                style={{ minHeight: "540px", zIndex: "2" }}
+                style={{ minHeight: "400px", zIndex: "2" }}
             >
                 {images.map((image, index) => (
                     <SwiperSlide key={index}>
