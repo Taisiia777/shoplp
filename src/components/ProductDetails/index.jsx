@@ -159,7 +159,7 @@ export default function ProductDetails({
                 position: "absolute",
                 top: "0",
                 left: "0",
-                maxHeight: "540px",
+                maxHeight: isMobile ? "400px" : "540px",
                 borderRadius: "20px",
                 zIndex: "0",
                 width: '100%',
@@ -173,8 +173,9 @@ export default function ProductDetails({
                 slidesPerView={1}
                 loop={true}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
-                className="h-[33.75rem] w-full rounded-[20px] bg-cover bg-center"
-                style={{ minHeight: "400px", zIndex: "2" }}
+                className=" w-full rounded-[20px] bg-cover bg-center"
+                style={{ height:  isMobile ? "400px" : "540px",             maxHeight: isMobile ? "400px" : "540px",
+                     zIndex: "2" }}
             >
                 {images.map((image, index) => (
                     <SwiperSlide key={index}>
