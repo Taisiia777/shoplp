@@ -245,7 +245,7 @@ export default function ProductDetails({
                         size="md"
                         shape="round"
                         color="orange_50_deep_orange_200"
-                        className="self-stretch w-[120%] rounded-[15px] px-[2.13rem] font-medium sm:px-[1.25rem] text-[#8A5A3A] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96]
+                        className="self-stretch h-[50px] w-[120%] rounded-[15px] px-[2.13rem] font-medium sm:px-[1.25rem] text-[#8A5A3A] bg-gradient-to-r from-[#FFF1E5] to-[#F0BF96]
                             hover:scale-105 active:scale-95 transition-transform duration-300 ease-in-out mb-[10px] text-sm"
                         onClick={() => window.location.href = url} // Перенаправление по ссылке из пропса `url`
 
