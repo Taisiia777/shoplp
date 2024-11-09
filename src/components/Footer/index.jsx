@@ -2,6 +2,17 @@ import { Text, Img, Button, Heading } from "./..";
 import React from "react";
 
 export default function Footer({ ...props }) {
+    const handleLink1Click = () => {
+        window.location.href = "https://www.instagram.com/omli.io/profilecard/?igsh=MTQxZ25mZDZsYWczNg==";
+    };
+
+    const handleLink2Click = () => {
+        window.location.href = "https://www.instagram.com/omli.io/profilecard/?igsh=MTQxZ25mZDZsYWczNg==";
+    };
+
+    const handleLink3Click = () => {
+        window.location.href = "https://www.instagram.com/omli.io/profilecard/?igsh=MTQxZ25mZDZsYWczNg==";
+    };
     return (
         <footer
             {...props}
@@ -30,17 +41,22 @@ export default function Footer({ ...props }) {
                                     className="text-[1.38rem] font-semibold leading-[1.88rem] tracking-[0.00rem] text-black"
                                 >
                                     <>
-                                        <br />
+                                        <br/>
                                         management@omli.io
+                                        <br/>
+                                        <a href="tel:+79263973628"
+                                           className="text-[1.38rem] font-semibold leading-[1.88rem] text-black">
+                                            +79263973628
+                                        </a>
                                     </>
                                 </Heading>
                                 <div className="flex w-[74%] gap-[0.25rem] md:w-full">
-                                    <Button shape="square" className="w-[2.75rem] px-[0.13rem]">
+                                    <Button shape="square" className="w-[2.75rem] px-[0.13rem]" onClick={handleLink1Click}>
                                         <Img src="images/img_checkmark.svg" />
                                     </Button>
-                                    <Img src="images/img_call.svg" alt="Call Icon" className="h-[2.75rem] w-[2.75rem]" />
+                                    <Img src="images/img_call.svg" alt="Call Icon" className="h-[2.75rem] w-[2.75rem]" onClick={handleLink2Click}/>
                                     <div className="flex flex-1 items-center gap-[0.25rem]">
-                                        <Button shape="square" className="w-[2.75rem] px-[0.13rem]">
+                                        <Button  shape="square" className="w-[2.75rem] px-[0.13rem]" onClick={handleLink3Click}>
                                             <Img src="images/img_checkmark1.svg" />
                                         </Button>
                                         <Text
@@ -97,9 +113,9 @@ export default function Footer({ ...props }) {
                                     </a>
                                 </li>
                             </ul>
-                            <Text size="b3" as="p" className="text-[0.75rem] font-normal text-black">
-                                Разработка сайта
-                            </Text>
+                            {/*<Text size="b3" as="p" className="text-[0.75rem] font-normal text-black">*/}
+                            {/*    Разработка сайта*/}
+                            {/*</Text>*/}
                         </div>
                     </div>
                 </div>
