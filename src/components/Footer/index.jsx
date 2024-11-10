@@ -3,11 +3,11 @@ import React from "react";
 
 export default function Footer({ ...props }) {
     const handleLink1Click = () => {
-        window.location.href = "https://www.instagram.com/omli.io/profilecard/?igsh=MTQxZ25mZDZsYWczNg==";
+        window.location.href = "https://t.me/omli_io";
     };
 
     const handleLink2Click = () => {
-        window.location.href = "https://www.instagram.com/omli.io/profilecard/?igsh=MTQxZ25mZDZsYWczNg==";
+        window.location.href = "https://wa.me/message/NT6JDTFGQ6MPJ1";
     };
 
     const handleLink3Click = () => {
